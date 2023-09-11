@@ -64,8 +64,18 @@ const getEpisodes = async(page) => {
         console.log("Error:" + error);
     }
 }
+const getEpisodeWithFullLink = async(url) => {
+
+    try {
+        const res = await fetch(`${url}`);
+        const data = res.json();
+        return data;
+    } catch (error) {
+        console.log("Error:" + error);
+    }
+}
 
 
 
 
-export { getCharacter, getCharacters, getLocation, getLocations, getEpisode, getEpisodes };
+export { getCharacter, getCharacters, getLocation, getLocations, getEpisode, getEpisodes, getEpisodeWithFullLink };

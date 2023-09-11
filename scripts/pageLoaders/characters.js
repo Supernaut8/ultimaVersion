@@ -1,6 +1,6 @@
-import { getCharacters, getEpisodeWithLink } from "./services/getData.js";
+import { getCharacters, getEpisodeWithFullLink } from "./services/getData.js";
 
-const display = document.querySelector(".grid-container");
+const display = document.querySelector("main");
 
 
 
@@ -43,8 +43,6 @@ const characterList = async(page = 1) => {
 
 
 
-            // let episodeInfo = getEpisodeWithLink(lastEpisode);
-
 
 
 
@@ -57,12 +55,14 @@ const characterList = async(page = 1) => {
 
 }
 
-characterList();
 
 
 async function getEpisodeInfo(lastEpisode) {
     let res;
-    res = await getEpisodeWithLink(lastEpisode);
+    // console.log(lastEpisode)
+    res = await getEpisodeWithFullLink(lastEpisode);
     console.log(res.name);
     return res.name;
 }
+
+export { characterList };
