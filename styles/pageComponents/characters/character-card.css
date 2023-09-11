@@ -122,26 +122,6 @@ main {
     }
 }
 
-
-/* @media only screen and (max-width: 768px) {
-    
-     .tarjeta {    
-         min-width: 315px;   
-     }
- 
-     .container-btnCompare {   
-         min-width: 315px;   
-     }
- 
-     .grid-item img {
-        min-width: 200px;     
-     }
- 
-     .btnCompare {
-         min-width: 200px;   
-     } 
- }*/
-
 @media only screen and (max-width: 689px) {
     .grid-item {
         margin: auto;

@@ -33,7 +33,7 @@ const characterList = async(page = 1) => {
                     </div>
                 </div>
                 <div class="container-btnCompare">
-                    <button class="btnCompare">
+                    <button class="btnCompare" id="${character.id}">
                         Compare Characters
                     </button>
                 </div>
