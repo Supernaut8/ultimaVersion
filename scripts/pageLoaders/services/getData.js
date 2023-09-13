@@ -4,7 +4,7 @@ const getCharacter = async(id) => {
     try {
         const res = await fetch(`${apiUrl}/character/${id}`);
         const data = res.json();
-        return data;
+        return data[0].results;
     } catch (error) {
         console.log("Error:" + error);
     }

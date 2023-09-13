@@ -6,7 +6,7 @@ const display = document.querySelector("main");
 
 
 
-const characterList = async(page = 1) => {
+const listCharacters = async(page = 1) => {
 
     try {
         const { results } = await getCharacters(page);
@@ -65,4 +65,4 @@ async function getEpisodeInfo(lastEpisode) {
     return res.name;
 }
 
-export { characterList };
+export { listCharacters };
