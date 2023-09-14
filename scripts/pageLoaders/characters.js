@@ -17,6 +17,7 @@ const listCharacters = async(page = 1) => {
             lastEpisode = character.episode[character.episode.length - 1]
             let episodeName = await getEpisodeInfo(lastEpisode);
 
+
             article.setAttribute('class', 'character');
             article.innerHTML = `
 

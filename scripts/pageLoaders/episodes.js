@@ -21,6 +21,18 @@ const listEpisodes = async(page = 1) => {
 
     try {
         const { results } = await getEpisodes(page);
+
+        // results[0].characters.forEach(character => {
+        //     console.log(character)
+        //     const characterInfo = getCharacter(character)
+
+        //     `
+        //    <h1>Nombre: ${characterInfo.name} </h1>
+        //    <h1>foto: ${characterInfo.image} </h1>
+        //    `
+
+        // });
+
         display.textContent = "";
         await results.forEach(async episode => {
             const article = document.createElement('article');
@@ -37,7 +49,7 @@ const listEpisodes = async(page = 1) => {
                     <br>
                 </div> 
                 <div class = "episode-card_boton active">
-                    <button class="episode-card_boton" type="button" id="${episode.id}">
+                    <button class="episode-card_boton" type="button" data-url="${episode.url}" id="${episode.id}">
                         +info 
                     </button> 
                 </div> 

@@ -25,13 +25,6 @@
     border-radius: 6px;
      border: #39ff14 solid 5px; 
 
-    
-   
-
-
-
-
-
 
 } */
 
@@ -102,15 +95,102 @@ body {
     color: #39ff14;
 }
 
-button.active,
+
+/* button.active,
 button:hover {
     background-color: #97ce4c;
     transition: .5s;
     color: black;
-}
+} */
 
 @media only screen and ( max-width :1024px) {
-    .card {
+    /* .card {
         max-height: 200px;
-    }
+    } */
+}
+
+
+/* --------------------------- */
+
+div.card {
+    /*background-color: #e4a788;
+    width: 100%;
+    height: 100%;*/
+    /*border: solid 1px black;*/
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    font-family: 'fantasy';
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-size: cover;
+    border-radius: 6px;
+    border: #39ff14 solid 5px;
+}
+
+.card_container {
+    background-image: url(../multimedia/descarga.jpg);
+    color: azure;
+    width: 300px;
+}
+
+.episode-card_container {
+    background-image: url(../multimedia/descarga.jpg);
+    color: azure;
+    width: 300px;
+}
+
+.card_cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    /*overflow: ;*/
+}
+
+.episode-card_cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    /*overflow: ;*/
+}
+
+.card_boton {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: end;
+    /*height: 17%;*/
+}
+
+.episode-card_boton {}
+
+.boton {
+    background-color: rgb(13, 14, 13);
+    width: 100%;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-end-end-radius: 4px;
+    height: 40px;
+    color: #39ff14;
+}
+
+button.active,
+button:hover {
+    background-color: brown;
+    transition: .5s;
+    color: white;
 }
