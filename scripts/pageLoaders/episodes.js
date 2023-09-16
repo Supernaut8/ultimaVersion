@@ -1,10 +1,12 @@
-import { getEpisodes } from "./services/getData.js";
+import { getEpisodeWithLink } from "./services/getData.js";
+import { getCharacters, getEpisode, getEpisodes, } from "./services/getData.js";
+import { characterList } from "./masinfo.js";
 
 
 
 
 
-const listEpisodes = async(page = 1) => {
+const listEpisodes = async (page = 1) => {
     const displayContainer = document.querySelector("main");
     const container = document.createElement('section')
     container.setAttribute('class', 'episodes-container');
@@ -49,7 +51,7 @@ const listEpisodes = async(page = 1) => {
                     <br>
                 </div> 
                 <div class = "episode-card_boton active">
-                    <button class="episode-card_boton" type="button" data-url="${episode.url}" id="${episode.id}">
+                    <button class="episode-card_boton" type="button" data-url="${episode.url}" id="boton-${episode.id}">
                         +info 
                     </button> 
                 </div> 
@@ -66,6 +68,15 @@ const listEpisodes = async(page = 1) => {
 
 
             display.appendChild(article);
+            
+            const masInfoButton = document.getElementById(`boton-${episode.id}`)        
+            masInfoButton.addEventListener("click", async (e) => {
+                let characterInEpisode = e.target.dataset.url;
+                const results = await getEpisodeWithLink(characterInEpisode);
+                results.characters.textContent = "";
+                characterList(results.characters, episode.id)
+            });
+            
         });
     } catch (error) {
         console.log("Error:" + error);

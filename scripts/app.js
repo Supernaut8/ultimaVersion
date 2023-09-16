@@ -1,7 +1,10 @@
 import { listCharacters } from "./pageLoaders/characters.js";
 import { listEpisodes } from "./pageLoaders/episodes.js";
+
+
 const charactersButton = document.querySelector(".load-characters");
 const episodesButton = document.querySelector(".load-episodes");
+
 
 charactersButton.addEventListener("click", (e) => {
     listCharacters()
@@ -9,3 +12,4 @@ charactersButton.addEventListener("click", (e) => {
 episodesButton.addEventListener("click", (e) => {
     listEpisodes()
 })
+

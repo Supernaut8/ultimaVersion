@@ -55,19 +55,19 @@
 
 main {
     background: linear-gradient(#97ce4c, #e89ac7);
-    /*background-color: #97ce4c;*/
 }
 
-*/ */ .grid-container {
+.characters-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 700px));
     grid-gap: 10px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
-.grid-item {
+.characters-item {
     background-color: #44281d;
-    max-width: 650px;
+    max-width: 750px;
     border-radius: 12px;
 }
 
@@ -75,12 +75,12 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 650px;
+    max-width: 750px;
 }
 
 .tarjeta img {
-    max-width: 400px;
-    height: auto;
+    width: 400px;
+    height: 300px;
     border-top-left-radius: 12px;
 }
 
@@ -90,6 +90,7 @@ main {
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
+    text-transform: uppercase;
     width: 400px;
     height: 40px;
     border: none;
@@ -98,9 +99,10 @@ main {
 }
 
 .btnCompare:hover {
-    box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
+    background-color: #e4a788;
+    /* box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 3px rgba(0, 0, 0, 0.75); */
 }
 
 .description {
@@ -118,33 +120,26 @@ main {
     padding: 10px 0;
 }
 
-@media only screen and (max-width: 1200px) {
-    .grid-item {
-        margin: auto 30px;
-        width: auto;
-        height: auto;
-    }
-    .tarjeta {
-        width: auto;
-    }
-}
-
 @media only screen and (max-width: 689px) {
-    .grid-item {
+    .characters-item {
         margin: auto;
         max-width: 400px;
         height: auto;
     }
+
     .tarjeta {
         max-width: 100%;
     }
-    .grid-item img {
+
+    .characters-item img {
         min-width: 200px;
         border-top-right-radius: 12px;
     }
+
     .container-btnCompare {
         max-width: 400px;
     }
+
     .btnCompare {
         max-width: 100%;
         border-bottom-right-radius: 12px;
@@ -152,18 +147,21 @@ main {
 }
 
 @media only screen and (max-width: 410px) {
-    .grid-item {
+    .characters-item {
         margin: auto;
         max-width: 90%;
         height: auto;
     }
+
     .tarjeta {
         max-width: 100%;
     }
-    .grid-item img {
+
+    .characters-item img {
         min-width: 200px;
         border-top-right-radius: 12px;
     }
+
     .btnCompare {
         max-width: 100%;
         border-bottom-right-radius: 12px;
